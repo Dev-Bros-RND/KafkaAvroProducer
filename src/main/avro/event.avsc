@@ -1,0 +1,17 @@
+{
+    "type": "record",
+    "name": "Event",
+    "namespace": "org.pojo",
+    "version": "1",
+    "fields": [
+        { "name": "id", "type": "string", "logicalType": "uuid", "doc": "The id of the event" },
+        { "name": "eventDate", "type": "long", "logicalType": "date", "doc": "event start date" },
+        { "name": "description", "type": "string", "doc": "description of the event" },
+        { "name": "priority", "type": {
+                "type": "enum",
+                "name": "Priority",
+                "symbols": [ "LOW", "MEDIUM", "HIGH" ]
+            }
+        }
+    ]
+}
